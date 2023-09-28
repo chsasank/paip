@@ -38,3 +38,17 @@
 (print (macroexpand-1 '(while2 (< i 10)
                         (print (* i i))
                         (setf i (+i 1)))))
+
+
+(defun math-quiz (&key (op '+) (range 100) (n 10))
+  "Ask the user a series of math problems."
+  (dotimes (i n)
+    (problem (random range) op (random range))))
+
+
+(defun problem (x op y)
+  "Ask a math problem, read a reply, and say if it is correct."
+  (format t "~&How much is ~d ~a ~d?" x op y)
+  (if (eql (read) (funcall op x y))
+      (princ "Correct!")
+      (princ "Sorry, that's not right.")))
