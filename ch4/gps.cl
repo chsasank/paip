@@ -7,7 +7,6 @@
         (apply #'remove item sequence
             :test (complement test) keyword-args)))
 
-
 (defvar *state* nil "Current state")
 
 (defvar *ops* nil "List of available ops")
