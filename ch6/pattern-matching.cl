@@ -141,3 +141,6 @@
         fail
         bindings))
 
+(defun segment-match (pattern input bindings &optional (start 0))
+    "Match the segment pattern ((?* var) . pat) against input"
+)
