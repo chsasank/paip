@@ -142,19 +142,19 @@
             (format-flush t " Type ; to see more or . to stop")
             (continue-p))))
 
-;; example
-(<- (likes Kim Robin))
-(<- (likes Sandy Lee))
-(<- (likes Sandy Kim))
-(<- (likes Robin cats))
-(<- (likes Sandy ?x) (likes ?x cats))
-(<- (likes Kim ?x) (likes ?x Lee) (likes ?x Kim))
-(<- (likes ?x ?x))
+; ;; example
+; (<- (likes Kim Robin))
+; (<- (likes Sandy Lee))
+; (<- (likes Sandy Kim))
+; (<- (likes Robin cats))
+; (<- (likes Sandy ?x) (likes ?x cats))
+; (<- (likes Kim ?x) (likes ?x Lee) (likes ?x Kim))
+; (<- (likes ?x ?x))
 
-;; member relation
-(<- (member ?item (?item . ?)))
-(<- (member ?item (? . ?rest)) (member ?item ?rest))
+; ;; member relation
+; (<- (member ?item (?item . ?)))
+; (<- (member ?item (? . ?rest)) (member ?item ?rest))
 
-;; length
-(<- (length () 0))
-(<- (length (?x . ?y) (1 + ?n)) (length ?y ?n))
+; ;; length
+; (<- (length () 0))
+; (<- (length (?x . ?y) (1 + ?n)) (length ?y ?n))
